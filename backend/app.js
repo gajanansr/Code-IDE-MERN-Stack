@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors({
-  origin:["code-ide-mern-stack.vercel.app"],
+  origin:["code-ide-mern-stack-frontend.vercel.app"],
   methods:["POST", "GET"],
   credentials: true
 }));
