@@ -11,4 +11,4 @@ export const removeClass = (el,className) => {
 };
 
 
-export const api_base_url = "http://localhost:3000"
+export const api_base_url = "code-ide-mern-stack-api.vercel.app"
