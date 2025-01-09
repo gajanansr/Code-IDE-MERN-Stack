@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb+srv://gajanan1055:<Rathod@1055>@cluster0.illzenj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect('mongodb+srv://gajanan1055:<KRlmgVnUwcCwJQFp>@bank.c9ts2.mongodb.net/?retryWrites=true&w=majority&appName=bank');
 
 const projectSchema = new mongoose.Schema({
   title: String,
