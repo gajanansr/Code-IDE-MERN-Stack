@@ -9,4 +9,6 @@ export const removeClass = (el, className) => {
 };
 
 export const api_base_url =
-  "http://localhost:3000" || "http://www.codefusion-sanika.vercel.app";
+  "http://localhost:3000" ||
+  "http://codefusion-sanika-api.vercel.app" ||
+  "https://code-ide-mern-stack-api.vercel.app/";
