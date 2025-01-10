@@ -1,13 +1,14 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-mongoose.connect('mongodb+srv://gajanan1055:<KRlmgVnUwcCwJQFp>@bank.c9ts2.mongodb.net/?retryWrites=true&w=majority&appName=bank');
+mongoose.connect(process.env.MONGO_URL);
 
 const projectSchema = new mongoose.Schema({
   title: String,
   createdBy: String,
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   htmlCode: {
     type: String,
@@ -23,7 +24,7 @@ const projectSchema = new mongoose.Schema({
     <body>
     
     </body>
-    </html>`
+    </html>`,
   },
   cssCode: {
     type: String,
@@ -32,12 +33,12 @@ const projectSchema = new mongoose.Schema({
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }`
+    }`,
   },
   jsCode: {
     type: String,
-    default: 'console.log("Hello World")'
-  }
+    default: 'console.log("Hello World")',
+  },
 });
 
 module.exports = mongoose.model("Project", projectSchema);

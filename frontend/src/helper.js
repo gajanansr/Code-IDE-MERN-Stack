@@ -1,14 +1,12 @@
-import { useState } from "react";
-
-export const toggleClass = (el,className) => {
+export const toggleClass = (el, className) => {
   let elem = document.querySelector(el);
   elem.classList.toggle(className);
 };
 
-export const removeClass = (el,className) => {
+export const removeClass = (el, className) => {
   let elem = document.querySelector(el);
   elem.classList.remove(className);
 };
 
-
-export const api_base_url = "code-ide-mern-stack-api.vercel.app"
+export const api_base_url =
+  "http://localhost:3000" || "http://www.codefusion-sanika.vercel.app";

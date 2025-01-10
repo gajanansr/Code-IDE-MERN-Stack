@@ -1,24 +1,25 @@
-let mongoose = require('mongoose');
+let mongoose = require("mongoose");
+require("dotenv").config();
 
-mongoose.connect('mongodb+srv://gajanan1055:<KRlmgVnUwcCwJQFp>@bank.c9ts2.mongodb.net/?retryWrites=true&w=majority&appName=bank');
+mongoose.connect(process.env.MONGO_URL);
 
 let userSchema = new mongoose.Schema({
   name: String,
   username: String,
   email: String,
   password: String,
-  date:{
+  date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   isBlocked: {
     type: Boolean,
-    default: false
+    default: false,
   },
   isAdmin: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
-module.exports = mongoose.model('User', userSchema); // 'User' is the name of the collection
+module.exports = mongoose.model("User", userSchema); // 'User' is the name of the collection
